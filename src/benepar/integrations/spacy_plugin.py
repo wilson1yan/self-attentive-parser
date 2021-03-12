@@ -114,8 +114,8 @@ class BeneparComponent:
             batch_size: deprecated and ignored; use subbatch_max_tokens instead
         """
         self._parser = load_trained_model(name)
-        if torch.cuda.is_available():
-            self._parser.cuda()
+#         if torch.cuda.is_available():
+#             self._parser.cuda()
 
         self.subbatch_max_tokens = subbatch_max_tokens
         self.disable_tagger = disable_tagger
